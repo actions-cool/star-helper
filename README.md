@@ -1,4 +1,4 @@
-# 🌟 star-helper
+# 🌟 Star Helper
 
 ![](https://img.shields.io/github/workflow/status/actions-cool/star-helper/CI?style=flat-square)
 [![](https://img.shields.io/badge/marketplace-star--helper-blueviolet?style=flat-square)](https://github.com/marketplace/actions/star-helper)

@@ -6,6 +6,10 @@
 
 A GitHub Action help you star or unstar a repository.
 
+## 🌈 Preview
+
+https://github.com/actions-cool/star-helper/blob/main/.github/workflows/star.yml
+
 ## 🚀 How to use?
 
 ```yml

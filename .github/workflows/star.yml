@@ -14,4 +14,4 @@ jobs:
         with:
           token: ${{ secrets.STAR_TOKEN }}
           actions: 'unstar, star'
-          repo: 'actions-cool/star-helper'
+          repo: 'ant-design/ant-design'

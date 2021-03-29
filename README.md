@@ -1,48 +1,45 @@
-<p align="center">
-  <a href="">
-    <img width="140" src="https://avatars.githubusercontent.com/u/73879334?s=200&v=4" />
-  </a>
-</p>
+# 🌟 star-helper
 
-<h1 align="center">Action JavaScript Template</h1>
-<div align="center">
-A simple javascript template for rapid development of GitHub actions.
-</div>
+![](https://img.shields.io/github/workflow/status/actions-cool/star-helper/CI?style=flat-square)
+[![](https://img.shields.io/badge/marketplace-star--helper-blueviolet?style=flat-square)](https://github.com/marketplace/actions/star-helper)
+[![](https://img.shields.io/github/v/release/actions-cool/star-helper?style=flat-square&color=orange)](https://github.com/actions-cool/star-helper/releases)
 
-![](https://img.shields.io/github/workflow/status/actions-cool/action-js-template/CI?style=flat-square)
-[![](https://img.shields.io/badge/marketplace-action--js--template-blueviolet?style=flat-square)](https://github.com/marketplace/actions/action-js-template)
-[![](https://img.shields.io/github/v/release/actions-cool/action-js-template?style=flat-square&color=orange)](https://github.com/actions-cool/action-js-template/releases)
+A GitHub Action help you star or unstar a repository.
 
 ## 🚀 How to use?
 
-![](https://github.com/actions-cool/resources/blob/main/image/template-js.png?raw=true)
+```yml
+name: Star Helper
 
-## 📒 Catalog Introduction
+on:
+  schedule:
+    - cron: '0 0 * * *'
 
+jobs:
+  star-helper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions-cool/star-helper@v1.0.0
+        with:
+          token: ${{ secrets.STAR_TOKEN }}
+          actions: 'unstar, star'
+          repo: 'actions-cool/star-helper'
 ```
-├── .github/workflows/     The CI for make sure it is packaged correctly
-├── dist                   Package the generated Aciton execution code
-├── src                    Component home directory
-│   └── main.js            Your code
-└── action.yml             Action config
-```
 
-The rest of the documents can be consulted by yourself.
+| Name | Desc | Type | Required |
+| -- | -- | -- | -- |
+| token | GitHub token. Cannot use default token. | string | ✔ |
+| actions | The actions. Option `star` `unstar`. | string | ✔ |
+| repo | The repository owner and name. | string | ✖ |
 
-## 🤖 Command introduction
-
-| Name | Desc |
-| -- | -- |
-| package | action build for release |
-| format | prettier write |
-| format-check | prettier check |
+- `repo`: If it is not filled in, it will read the current repository
 
 ## ⚡ Feedback
 
 You are very welcome to try it out and put forward your comments. You can use the following methods:
 
-- Report bugs or consult with [Issue](https://github.com/actions-cool/action-js-template/issues)
-- Submit [Pull Request](https://github.com/actions-cool/action-js-template/pulls) to improve the code of `action-js-template`
+- Report bugs or consult with [Issue](https://github.com/actions-cool/star-helper/issues)
+- Submit [Pull Request](https://github.com/actions-cool/star-helper/pulls) to improve the code of `star-helper`
 
 也欢迎加入 钉钉交流群
 

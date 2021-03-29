@@ -1,22 +1,22 @@
 # https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions
-name: 'Action JS Template'
-description: 'A simple javascript template for rapid development of GitHub actions.'
+name: 'Star Helper'
+description: 'A GitHub Action help you star or unstar a repository.'
 author: 'xrkffgg'
 
+# https://actions-cool.github.io/github-action-branding/
 branding:
-  # https://actions-cool.github.io/github-action-branding/
-  icon: 'file'
-  color: 'blue'
+  icon: 'star'
+  color: 'yellow'
 
 inputs:
-  GITHUB_TOKEN:
+  token:
     description: Secret GitHub API token to use for making API requests.
-    default: ${{ github.token }}
     required: true
-
-#outputs:
-#  result:
-#    description: action result
+  repo:
+    description: The repository name.
+  actions:
+    description: The Actions. Options `star` `unstar`.
+    required: true
 
 runs:
   using: 'node12'

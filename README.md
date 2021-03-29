@@ -32,7 +32,13 @@ jobs:
 | actions | The actions. Option `star` `unstar`. | string | ✔ |
 | repo | The repository owner and name. | string | ✖ |
 
+- `token`: Need to use personal authentication token
+  1. https://github.com/settings/tokens/new
+  2. Select `repo: Full control of private repositories`
+  3. Add token to your Actions
+  4. [Help you understand](https://github.com/actions-cool/This-repo-has-11-stars-7-forks#how-to-use-it-in-your-own-project)
 - `repo`: If it is not filled in, it will read the current repository
+- You can add this Action to any project. [How trigger](https://docs.github.com/en/actions/reference/events-that-trigger-workflows). Enjoy it
 
 ## ⚡ Feedback
 

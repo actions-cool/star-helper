@@ -1,0 +1,17 @@
+name: Star Helper
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  push:
+    branches: main
+
+jobs:
+  star-helper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions-cool/star-helper@main
+        with:
+          token: ${{ secrets.STAR_TOKEN }}
+          actions: 'unstar, star'
+          repo: 'actions-cool/star-helper'

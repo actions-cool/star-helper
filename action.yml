@@ -18,6 +18,10 @@ inputs:
     description: The Actions. Options `star` `unstar`.
     required: true
 
+outputs:
+  star-count:
+    description: Return the repository star count after actions.
+
 runs:
   using: 'node12'
   main: 'dist/index.js'

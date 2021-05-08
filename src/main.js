@@ -36,6 +36,15 @@ async function run() {
         core.setFailed(`The action [${action} is not support!]`);
       }
     }
+
+    // return new star
+    const { data: nowRepo } = await octokit.repos.get({
+      owner,
+      repo,
+    });
+
+    core.setOutput('star-count', nowRepo.stargazers_count);
+    core.info(`[Actions: query start][${owner}/${repo}][${nowRepo.stargazers_count}]`);
   } catch (error) {
     core.setFailed(error.message);
   }

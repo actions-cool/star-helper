@@ -23,12 +23,13 @@ jobs:
   star-helper:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions-cool/star-helper@v1.0.0
+      - uses: actions-cool/star-helper@v1.1.0
         with:
           token: ${{ secrets.STAR_TOKEN }}
           actions: 'unstar, star'
           repo: 'actions-cool/star-helper'
 ```
+### Inputs
 
 | Name | Desc | Type | Required |
 | -- | -- | -- | -- |
@@ -43,6 +44,10 @@ jobs:
   4. [Help you understand](https://github.com/actions-cool/This-repo-has-11-stars-7-forks#how-to-use-it-in-your-own-project)
 - `repo`: If it is not filled in, it will read the current repository
 - You can add this Action to any project. [How trigger](https://docs.github.com/en/actions/reference/events-that-trigger-workflows). Enjoy it
+
+### Outputs
+
+- `star-count`: Return the repository star count after actions.
 
 ## ⚡ Feedback
 
